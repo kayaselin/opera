@@ -19,4 +19,8 @@ Route::match(['get', 'post'], '/login', [AuthController::class, 'login'])->name(
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
+Route::get('/retrieve-data', [DataController::class, 'retrieve'])->name('retrieve-data');
+Route::post('/add-data', 'DataController@add')->name('add-data');
+
+
 
